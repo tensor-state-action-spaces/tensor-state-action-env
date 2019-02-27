@@ -14,7 +14,9 @@ the opponent team. In
 teammate as soon as possible. Other agents and the opponents are given random actions in
 the environment.
 
-The following table describes the details of the transition and reward functions:
+The following table describes the details of the transition and reward
+functions:
+
 | Condition                                          | Result                       | Reward |
 |----------------------------------------------------|:----------------------------:|:------:|
 | pass outside the same column or the same row       | invalid pass, terminate      | -10    |
