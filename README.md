@@ -36,9 +36,7 @@ environment.
 
 Here we have two tables to describe the details. The first table
 describes the conditions, outcomes and rewards for the overall team
-reward and task. The second table describes the outcomes and rewards
-for a single agent in the team.
-
+reward and task: 
 
 | Condition                                                         | Result                   | Reward |
 |-------------------------------------------------------------------|:------------------------:|:------:|
@@ -46,6 +44,9 @@ for a single agent in the team.
 | an opponent is right next to the agent with the ball (touch)      | fail, terminate          | -1     |
 | pass to a teammate in the same column or row without interception | successful pass, proceed | 0      |
 | agent with the ball moves without being touched                   | proceed                  | 0      |
+
+The second table describes the outcomes and rewards
+for a single agent in the team:
 
 | Condition                                          | Result                              | Reward |
 |----------------------------------------------------|:-----------------------------------:|:------:|
