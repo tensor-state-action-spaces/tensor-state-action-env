@@ -1,12 +1,34 @@
-# Test Environments for Zero-shot Transfer Learning
+# Test Environments for Reinforcement Learning with Tensor State and Action Spaces
 
 ## Introduction
-This repo contains the environments for zero-shot transfer learning
-presented in AAMAS Extended Abstract [Zero Shot Transfer Learning for
-Robot
-Soccer](https://dl.acm.org/ft_gateway.cfm?id=3238075&ftid=1986331&dwn=1&CFID=105147742&CFTOKEN=a948d5965970ca19-D8519914-DEED-3FFD-E94AE98E2B143805).
+This repo contains the test environments for IJCAI Submission:
+Reinforcement Learning with Tensor State and Action Spaces
 
-## How to use this
+## Brief Introduction to Environment
+
+### _passing_ Domain
+*passing* is a grid world environment with two teams. One is composed
+of agents while the other is controlled by the environment, which is
+the opponent team. In
+*passing*, we only have the control over passing action of the agent with the ball and its goal is to pass the ball to a
+teammate as soon as possible. Other agents and the opponents are given random actions in
+the environment.
+
+### *take-the-treasure* Domain
+*take-the-treasure* is a grid world environment with two teams. One is
+composed of agents while the opponent team is controlled by the
+environment.
+
+### *break-out* Domain
+*break-out* is a clone of the Atari Breakout
+game, which
+allows for different screen heights and widths. Changing the height
+affects the number of rows of bricks, and spacing between the paddle
+of bricks. Changing the width affects the number of bricks in each
+row.
+
+
+## How to use this environment
 ### Install the environment
 These environments are actually openai-gym style envs, and it does
 depend on several gym features such as spaces objects from the gym. To
