@@ -14,6 +14,10 @@ the opponent team. In
 teammate as soon as possible. Other agents and the opponents are given random actions in
 the environment.
 
+For notice, in the **Result** column, **terminate** means the episode ends while
+**proceed** means the episode continues.
+
+
 The following table describes the details of the transition and reward
 functions:
 
@@ -29,6 +33,28 @@ functions:
 *take-the-treasure* is a grid world environment with two teams. One is
 composed of agents while the opponent team is controlled by the
 environment.
+
+Here we have two tables to describe the details. The first table
+describes the conditions, outcomes and rewards for the overall team
+reward and task. The second table describes the outcomes and rewards
+for a single agent in the team.
+
+
+| Condition                                                         | Result                   | Reward |
+|-------------------------------------------------------------------|:------------------------:|:------:|
+| intercepted by opponent                                           | fail, terminate          | -1     |
+| an opponent is right next to the agent with the ball (touch)      | fail, terminate          | -1     |
+| pass to a teammate in the same column or row without interception | successful pass, proceed | 0      |
+| agent with the ball moves without being touched                   | proceed                  | 0      |
+
+| Condition                                          | Result                              | Reward |
+|----------------------------------------------------|:-----------------------------------:|:------:|
+| pass outside the same column or the same row       | invalid pass, terminate             | -1     |
+| pass to valid empty location or opponent locations | invalid pass, terminate             | -1     |
+| pass to the teammate if an opponent is in between  | unsuccessful pass, terminate        | -1     |
+| move with actions out side of 4-connected grid     | invalid move, stay still, proceed   | -1     |
+| pass action when the agent doesn't have the ball   | invalid action, stay still, proceed | -1     |
+| pass to a teammate validly without interception    | proceed                             | 0      |
 
 ### *break-out* Domain
 *break-out* is a clone of the Atari Breakout
