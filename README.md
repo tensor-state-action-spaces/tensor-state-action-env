@@ -14,6 +14,15 @@ the opponent team. In
 teammate as soon as possible. Other agents and the opponents are given random actions in
 the environment.
 
+The following table describes the details of the transition and reward functions:
+| Condition                                                         | Result                       | Reward |
+|-------------------------------------------------------------------|------------------------------|--------|
+| pass outside the same column or the same row                      | invalid pass, terminate      | -10    |
+| pass to valid empty location or opponent locations                | invalid pass, terminate      | -10    |
+| pass to the teammate if an opponent is in between                 | unsuccessful pass, terminate | -10    |
+| hold the ball and haven't passed                                  | proceed                      | -1     |
+| pass to a teammate in the same column or row without interception | successful pass, terminate   | 10     |
+
 ### *take-the-treasure* Domain
 *take-the-treasure* is a grid world environment with two teams. One is
 composed of agents while the opponent team is controlled by the
