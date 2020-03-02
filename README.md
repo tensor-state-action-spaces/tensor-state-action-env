@@ -1,8 +1,8 @@
 # Test Environments for Reinforcement Learning with Tensor State and Action Spaces
 
 ## Introduction
-This repo contains the test environments for IJCAI Submission:
-Reinforcement Learning with Tensor State and Action Spaces
+This repo contains the test environments for Tensor Action Spaces for
+Multi-agent Robot Transfer Learning.
 
 ## Brief Introduction to Environment
 
